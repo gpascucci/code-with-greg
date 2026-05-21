@@ -1,0 +1,22 @@
+# Local Claude Code settings (session-specific permissions)
+.claude/settings.local.json
+
+# Environment and secrets
+.env
+*.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+dist/
+.next/
+
+# Terraform state (keep .tf files, ignore state and lock)
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
