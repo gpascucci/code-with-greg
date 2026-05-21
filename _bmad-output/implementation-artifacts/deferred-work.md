@@ -9,8 +9,7 @@ Items surfaced during review that are pre-existing or pre-launch requirements, n
 ### Content Placeholders (Greg must provide)
 - **GA4 Measurement ID** — replace `G-XXXXXXXXXX` in `src/layouts/BaseLayout.astro` (2 occurrences)
 - **Domain name** — replace `https://PLACEHOLDER.com` in `astro.config.mjs`
-- **Phone number** — add `href="tel:+1XXXXXXXXXX"` and display number in `src/components/ContactInfo.astro`
-- **Facebook page URL** — add link in `src/components/ContactInfo.astro` once page is renamed from "Kode Kids" to "Kode With Greg"
+- **Facebook page URL** — optionally add once page is renamed from "Kode Kids" to "Kode With Greg" (LinkedIn + GitHub are live in ContactInfo)
 - **Greg's headshot** — replace `src/assets/images/greg.jpg` (currently a 1×1 placeholder) with a real photo before deploying
 
 ### Infrastructure (one-time setup)

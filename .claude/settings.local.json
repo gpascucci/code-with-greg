@@ -24,7 +24,9 @@
       "Bash(npm run *)",
       "Bash(node *)",
       "Bash(Get-ChildItem -Path C:\\\\Users\\\\Greg -Recurse -Filter \"pascucci_web.jpg\" -ErrorAction SilentlyContinue)",
-      "Bash(Select-Object -First 5 FullName)"
+      "Bash(Select-Object -First 5 FullName)",
+      "Bash(code -r \"D:/Projects/kode-with-greg\" \"_bmad-output/implementation-artifacts/spec-kode-with-greg-website.md\")",
+      "Bash(echo \"exit:$?\")"
     ]
   }
 }

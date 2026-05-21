@@ -25,14 +25,113 @@ import CTABanner from '../components/CTABanner.astro';
     cta="Talk to Greg"
   />
 
-  <div class="py-16 px-4 sm:px-6 border-b border-gray-100">
+  <!-- What you need -->
+  <section class="py-16 px-4 sm:px-6 border-b border-gray-100">
     <div class="max-w-5xl mx-auto">
-      <p class="text-lg text-gray-600 max-w-xl">
-        Greg assesses what you want to build and groups you with others working toward the same goal.
-        You don't need to choose your track in advance — just reach out and tell him what you have in mind.
+      <h2 class="text-2xl sm:text-3xl font-bold mb-3">What you need to bring</h2>
+      <p class="text-gray-600 mb-10 max-w-lg">
+        No prior experience required. But a few things need to be in place before the session so we can hit the ground running.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="flex flex-col gap-3">
+          <h3 class="font-bold text-lg">A cloud account</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Sign up for <strong>AWS</strong>, <strong>Microsoft Azure</strong>, or <strong>Google Cloud</strong> before you arrive.
+            All three have free tiers — you won't need to pay anything on session day.
+            We use CLI tools to deploy fast, so having the account ready matters.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <h3 class="font-bold text-lg">An AI account</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Have at least one of <strong>Claude</strong> (Anthropic), <strong>ChatGPT / Codex</strong> (OpenAI),
+            or <strong>Gemini</strong> (Google) set up. Any capable LLM works — these are just the ones
+            Greg uses professionally. Free tiers are fine to start.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <h3 class="font-bold text-lg">A laptop</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Windows or Mac both work. No special setup beforehand — Greg walks you through
+            installing everything you need at the start of the session.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <h3 class="font-bold text-lg">A GPU (generative AI only)</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Only needed if you want to run AI models locally — image generation, local LLMs.
+            For everything else (web apps, APIs, cloud AI) a standard laptop is fine.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What does hosting cost after -->
+  <section class="py-16 px-4 sm:px-6 border-b border-gray-100">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-3">What does it cost after the session?</h2>
+      <p class="text-gray-600 mb-10 max-w-2xl">
+        Once your project is deployed, you own it. Here's what a real production stack — frontend, backend,
+        database, domain, and DNS — typically costs per month across the major cloud providers.
+        Free tiers can cover most of this in year one.
+      </p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-gray-200">
+              <th class="text-left py-3 pr-6 font-semibold text-gray-900">Component</th>
+              <th class="text-left py-3 pr-6 font-semibold text-gray-900">AWS</th>
+              <th class="text-left py-3 pr-6 font-semibold text-gray-900">Azure</th>
+              <th class="text-left py-3 font-semibold text-gray-900">Google Cloud</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100 text-gray-600">
+            <tr>
+              <td class="py-3 pr-6 font-medium text-gray-800">Frontend (static hosting)</td>
+              <td class="py-3 pr-6">S3 + CloudFront — ~$1–3</td>
+              <td class="py-3 pr-6">Static Web Apps — free–$9</td>
+              <td class="py-3">Firebase Hosting — free–$1</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-6 font-medium text-gray-800">Backend (serverless / compute)</td>
+              <td class="py-3 pr-6">Lambda — free–$5</td>
+              <td class="py-3 pr-6">Functions — free–$5</td>
+              <td class="py-3">Cloud Run — free–$5</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-6 font-medium text-gray-800">Database (managed)</td>
+              <td class="py-3 pr-6">RDS t4g.micro — ~$15</td>
+              <td class="py-3 pr-6">Azure SQL Basic — ~$5</td>
+              <td class="py-3">Cloud SQL micro — ~$9</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-6 font-medium text-gray-800">Domain + DNS</td>
+              <td class="py-3 pr-6">Route 53 — ~$2</td>
+              <td class="py-3 pr-6">App Service domain — ~$2</td>
+              <td class="py-3">Cloud DNS — ~$2</td>
+            </tr>
+            <tr class="border-t-2 border-gray-300 font-semibold text-gray-900">
+              <td class="py-3 pr-6">Estimated monthly total</td>
+              <td class="py-3 pr-6">~$20–25 / mo</td>
+              <td class="py-3 pr-6">~$13–21 / mo</td>
+              <td class="py-3">~$13–17 / mo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-xs text-gray-400 mt-4">
+        Estimates based on low-traffic hobby or small-business apps as of 2025. Actual costs vary by usage.
+        Free-tier credits (AWS 12-month, Azure $200, GCP $300) can reduce year-one costs to near zero.
       </p>
     </div>
-  </div>
+  </section>
 
   <CTABanner
     heading="Show up this Saturday."
