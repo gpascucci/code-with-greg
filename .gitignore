@@ -1,22 +1,24 @@
-# Local Claude Code settings (session-specific permissions)
-.claude/settings.local.json
-
-# Environment and secrets
-.env
-*.env
-.env.*
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Node
-node_modules/
+# build output
 dist/
-.next/
+# generated types
+.astro/
 
-# Terraform state (keep .tf files, ignore state and lock)
-*.tfstate
-*.tfstate.*
-.terraform/
-.terraform.lock.hcl
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/

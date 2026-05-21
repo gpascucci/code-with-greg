@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"\\(Get-Content brief.md\\) -replace 'Kode Kids', 'Kode Everyone' -replace 'kode-kids', 'kode-everyone' | Set-Content brief.md\")",
+      "Bash(powershell -Command \"\\(Get-Content brief.md\\) -replace 'Kode Everyone', 'Kode With Greg' | Set-Content brief.md\")",
+      "Bash(python3 \"D:\\\\Projects\\\\kode-kids\\\\.claude\\\\skills\\\\bmad-prd\\\\_bmad\\\\scripts\\\\resolve_customization.py\" --skill \"D:\\\\Projects\\\\kode-kids\\\\.claude\\\\skills\\\\bmad-prd\" --key workflow)",
+      "Bash(python3 *)",
+      "Bash(New-Item -ItemType Directory -Force -Path \"D:\\\\Projects\\\\kode-kids\\\\_bmad-output\\\\planning-artifacts\\\\prds\\\\prd-kode-kids-2026-05-20\")",
+      "Bash(Out-Null)",
+      "Bash(Write-Output \"created\")",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git config *)",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "WebSearch",
+      "Bash(git *)",
+      "Bash(New-Item -ItemType Directory -Force \"D:\\\\Projects\\\\kode-with-greg\\\\src\\\\assets\\\\images\")",
+      "Bash(New-Item -ItemType Directory -Force \"D:\\\\Projects\\\\kode-with-greg\\\\src\\\\assets\\\\images\\\\cards\")",
+      "Bash(Write-Output \"done\")",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(node *)",
+      "Bash(Get-ChildItem -Path C:\\\\Users\\\\Greg -Recurse -Filter \"pascucci_web.jpg\" -ErrorAction SilentlyContinue)",
+      "Bash(Select-Object -First 5 FullName)"
+    ]
+  }
+}

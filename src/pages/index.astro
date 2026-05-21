@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import SparkSection from '../components/SparkSection.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import CredibilityBlock from '../components/CredibilityBlock.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="Kode With Greg | Build with AI — Langford, BC"
+  description="In-person AI and web-building sessions in Langford, British Columbia. Saturdays. $200/person. No experience required."
+>
+  <Hero />
+  <SparkSection />
+  <HowItWorks />
+  <CredibilityBlock />
+  <CTABanner
+    heading="Ready to build something?"
+    cta="Let's Talk"
+  />
+</BaseLayout>

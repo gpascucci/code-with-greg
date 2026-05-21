@@ -1,0 +1,43 @@
+---
+import Nav from '../components/Nav.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>{title}</title>
+
+    <!-- Google Analytics GA4 — replace G-XXXXXXXXXX with real Measurement ID before launch -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+  </head>
+  <body class="bg-white text-black antialiased">
+    <Nav />
+    <main>
+      <slot />
+    </main>
+    <footer class="border-t border-gray-200 py-8 mt-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-sm text-gray-500 text-center">
+        &copy; {new Date().getFullYear()} Kode With Greg &mdash; Langford, British Columbia
+      </div>
+    </footer>
+  </body>
+</html>

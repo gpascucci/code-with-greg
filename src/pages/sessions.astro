@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SessionTracks from '../components/SessionTracks.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="Sessions | Kode With Greg"
+  description="Saturday sessions in Langford, BC. Build a business, build something, or just play around with AI tools. $200/person."
+>
+  <div class="py-16 px-4 sm:px-6 border-b border-gray-100">
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4">Sessions</h1>
+      <p class="text-lg text-gray-600 max-w-xl">
+        Every Saturday, Greg runs small-group sessions in his garage in Langford.
+        You come with an idea. You leave with something built.
+      </p>
+    </div>
+  </div>
+
+  <SessionTracks />
+
+  <CTABanner
+    heading="Not sure which track fits you?"
+    cta="Talk to Greg"
+  />
+
+  <div class="py-16 px-4 sm:px-6 border-b border-gray-100">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-lg text-gray-600 max-w-xl">
+        Greg assesses what you want to build and groups you with others working toward the same goal.
+        You don't need to choose your track in advance — just reach out and tell him what you have in mind.
+      </p>
+    </div>
+  </div>
+
+  <CTABanner
+    heading="Show up this Saturday."
+    cta="Let's Talk"
+  />
+</BaseLayout>

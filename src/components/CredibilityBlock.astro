@@ -1,0 +1,49 @@
+---
+import { Image } from 'astro:assets';
+import gregPhoto from '../assets/images/greg.jpg';
+---
+
+<section class="py-16 px-4 sm:px-6 border-b border-gray-100">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
+    <div class="w-32 h-32 md:w-40 md:h-40 rounded-none flex-shrink-0 overflow-hidden bg-gray-200">
+      <Image
+        src={gregPhoto}
+        alt="Greg Pascucci, founder of Kode With Greg"
+        class="w-full h-full object-cover"
+        width={160}
+        height={160}
+      />
+    </div>
+
+    <div class="flex flex-col gap-4 max-w-xl">
+      <h2 class="text-2xl sm:text-3xl font-bold">Who teaches this</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Greg Pascucci has been a professional software developer since 2005. Since 2024 he's been
+        all-in on LLMs — building with Claude Code, Codex, Gemini, and the BMad Method as lead
+        developer at his company. He teaches the same workflows he uses professionally.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Small groups. Saturday sessions. In his garage in Langford, BC. You'll leave having built
+        something real — not watched someone else do it.
+      </p>
+      <div class="flex gap-4 mt-2">
+        <a
+          href="https://www.linkedin.com/in/gregpascucci/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm font-medium text-black underline hover:no-underline"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://github.com/gpascucci"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm font-medium text-black underline hover:no-underline"
+        >
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+---
+import SessionTrack from './SessionTrack.astro';
+
+const tracks = [
+  {
+    name: 'Build a Business',
+    description: 'You have a business idea or side hustle that needs a web presence. You\'ll build a real site — a booking page, storefront, or landing page — that you own and can update yourself.',
+    audience: 'Entrepreneurs, freelancers, small business owners',
+  },
+  {
+    name: 'Build Something',
+    description: 'You have a project in mind — a game, a personal site, a Raspberry Pi setup, a portfolio. You\'ll leave with working code and the workflow to keep building after Saturday.',
+    audience: 'Hobbyists, curious adults, parents booking for a kid',
+  },
+  {
+    name: 'Play Around',
+    description: 'You\'re not sure what you want to build yet — you just want to see what\'s possible with modern AI tools. No project required. Come with curiosity.',
+    audience: 'Anyone new to AI tools or just getting started',
+  },
+];
+---
+
+<section class="py-16 px-4 sm:px-6 border-b border-gray-100">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-2xl sm:text-3xl font-bold mb-4">Session tracks</h2>
+    <p class="text-gray-600 mb-10 max-w-lg">
+      When you reach out, Greg will figure out which track fits you. You don't need to decide.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      {tracks.map((track) => (
+        <SessionTrack name={track.name} description={track.description} audience={track.audience} />
+      ))}
+    </div>
+
+    <div class="bg-gray-50 border border-gray-200 p-6 flex flex-col sm:flex-row gap-6 sm:gap-12">
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">Price</p>
+        <p class="font-bold text-lg">$200 per person</p>
+      </div>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">When</p>
+        <p class="font-bold text-lg">Saturdays</p>
+      </div>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">Format</p>
+        <p class="font-bold text-lg">Small groups</p>
+      </div>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">Payment</p>
+        <p class="font-bold text-lg">Cash or e-transfer</p>
+      </div>
+    </div>
+  </div>
+</section>

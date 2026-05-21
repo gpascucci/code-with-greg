@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center min-h-[44px] px-6 py-3 bg-black text-white font-semibold tracking-wide uppercase text-sm hover:bg-gray-800 transition-colors cursor-pointer no-underline;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center min-h-[44px] px-6 py-3 border-2 border-black text-black font-semibold tracking-wide uppercase text-sm hover:bg-black hover:text-white transition-colors cursor-pointer no-underline;
+  }
+}

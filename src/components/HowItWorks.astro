@@ -1,0 +1,34 @@
+---
+const steps = [
+  {
+    number: '01',
+    title: 'Pick an idea',
+    body: "Tell Greg what you want to build. He'll group you with people working toward the same goal.",
+  },
+  {
+    number: '02',
+    title: 'Show up Saturday',
+    body: 'Arrive at the garage in Langford. No prep required. Beginners welcome.',
+  },
+  {
+    number: '03',
+    title: 'Build something real',
+    body: 'You leave with working code, a live project, and the workflow to keep going.',
+  },
+];
+---
+
+<section class="py-16 px-4 sm:px-6 bg-gray-50 border-b border-gray-100">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-2xl sm:text-3xl font-bold mb-12">How it works</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+      {steps.map((step) => (
+        <div class="flex flex-col gap-3">
+          <span class="text-4xl font-bold text-gray-200" aria-hidden="true">{step.number}</span>
+          <h3 class="font-bold text-lg">{step.title}</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">{step.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
